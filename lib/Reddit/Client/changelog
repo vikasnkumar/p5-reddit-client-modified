@@ -1,0 +1,83 @@
+=head1 CHANGELOG
+# 1.394 8/16/21 Added third argument to approve_user, for unapprove
+# 1.394 Added unapprove_user, alias for approve_user with unapprove arg set
+
+# 1.390 fixed reply() in Link and Comment
+
+# 1.389 docs, fixed get_flair_options. when requesting flair for specific user it always failed
+#       and returned the requsting user's flair instead.
+
+# 1.388 5/3/21 added approve and ignore_reports to Comment
+# Needs doc:
+# report, modmail_mute, modmail_action, Modm...->archive, sticky_post
+
+# 1.387 Added approve and ignore_report functions to Link.pm
+
+# 1.386 2/19/21
+# updated get_subreddit_info, now takes second arg for specific page
+# added approve_user
+
+# 1.385 11/23/20
+# added modmail_action, ModmConv...->archive
+# 1.384
+# added invite_mod, arg-only version of invite_moderator
+# 1.384 10/11/20 update
+#   added report
+#
+# 1.384 9/29/20
+#   added modmail_mute
+#   submit_text: field 'text' is no longer required
+#   added more fields to Link
+
+# 1.383 added sticky_post
+
+# next big version can be when we put in the new mute
+# 1.382 (should be big ver?) added friend function - no we didn't
+
+# 1.381 changed default max request from 500 to 100
+
+# 1.38 7/27/20
+#   added ModmailConversation and ModmailMessage classes
+#   added function new_modmail_conversation
+
+
+# 1.375 7/2/20 added sr_detail to Link
+# 1.374 added nsfw option to submit_link
+
+# 1.373 edit now returns the edited thing's id
+# 1.372
+# -get_link now gets its links in a proper way, by calling get_links_by_ids and
+#  taking the first element
+# -Link class now has many more keys; should now reflect most or all of the keys
+#  Reddit returns, minus 'downs' and 'ups' because they are deprecated and can
+#  cause confusion
+
+
+# 1.37 01/09/20
+# -added select_flair (v2)
+# -added flairtemplate, creates or edits a v2 flair template
+# -added get_link_flair_options. Gets link flair for a sub. uses v2 endpoint.
+# -added get_link_flair_options_v1, which uses the v1 endpoint and is instantly deprecated
+# -added get_user_flair_options. Gets link flair for a sub. uses v2 endpoint.
+# -added get_user_flair_options_v1, which uses the v1 endpoint and is instantly deprecated
+# -select_post_flair is renamed select_flair, now accepts v2 arguments, and can
+# accept a username instead to flair a user. See the documentation for description
+
+
+# 1.36 12/22/19: new functions lock, unlock, nsfw, unnsfw
+
+# 1.352 10/25/19: iscomment, ispost and get_type are now static
+# added functions distinguish, undistinguish
+
+# 10/05/19 1.351 delete now returns result
+# 10/02/19 1.35 add_approved_user, minor housekeeping
+# 1.341 7/30 removed warnings, they're stupid
+# 7/30 mute and unmute
+# 1.33 7/10 corrected 'edited' to not be boolean
+# 5/29 1.32 unban
+# 5/3 .315 submit_comment now returns fullname not id
+# 4/25 .314 4/8 1.313
+#  .314 added locked key to Comment, was this a recent Reddit change?
+# 1.313 changed the behavior of print_request_errors
+# 1.312 requests that fail with print_request_errors as true now die instead of
+#       croak, which lets you capture the error message
