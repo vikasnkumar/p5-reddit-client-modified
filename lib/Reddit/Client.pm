@@ -1,6 +1,7 @@
 package Reddit::Client;
 
 our $VERSION = '1.3951'; 
+# 1.395.1 6/30/24 Rate Limit handling - by VIKAS
 # 1.395 2/15/23 duplicates
 # 1.394 8/16/21 Added third argument to approve_user, for unapprove
 # 1.394 Added unapprove_user, alias for approve_user with unapprove arg set
